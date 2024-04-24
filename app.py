@@ -15,7 +15,7 @@ def validate_user_input(input):
     if(input.isnumeric()):
         days_to_unit(int(input))
     else:
-        print("🚫 Sorry...our application only accepts *positive numbers* for days, please try again👇")
+        print("🚫 Sorry...our application only accepts *positive whole numbers* for days, please try again👇")
         get_user_input()
     
 def get_user_input():
