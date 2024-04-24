@@ -4,23 +4,26 @@ calculate_to_unit = 24;
 name_of_unit = "hours";
 
 def days_to_unit(d):
-    print(f"{d} days are {d*calculate_to_unit} {name_of_unit}")
-    render_again = input("Do you want to continuing calculation? (y/n) :\n")
-    if(render_again == 'y' or render_again == 'Y'):
-        get_user_input()
-    else:
-        print("Thanks for using our application and see you later👋")
+    print(f"✅ {d} days are {d*calculate_to_unit} {name_of_unit}")
        
 def validate_user_input(input):
     if(input.isnumeric()):
         days_to_unit(int(input))
     else:
-        print("🚫 Sorry...our application only accepts *positive whole numbers* for days, please try again👇")
+        print(f"❌ Your input = {input} is not accepted, only *positive whole numbers* are accepted.")
+        
+def rerender_app():
+    render_again = input("Do you want to continuing calculation? (y/n) :\n")
+    if(render_again == 'y' or render_again == 'Y'):
         get_user_input()
+    else:
+        print("👋 Thanks for using our application and see you later.")
     
 def get_user_input():
     user_input = input("Enter your Desired Number of Days:\n")
-    validate_user_input(user_input)
+    for number_of_days in user_input.split():
+        validate_user_input(number_of_days)
+    rerender_app()
     
 get_user_input()
 
