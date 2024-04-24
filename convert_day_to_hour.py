@@ -21,7 +21,9 @@ def rerender_app():
     
 def get_user_input():
     user_input = input("Enter your list of numbers separated with one space bewtween them i.e. 10 20 30\n")
-    for number_of_days in user_input.split():
+    print(user_input.split())
+    print(set(user_input.split()))
+    for number_of_days in set(user_input.split()):
         validate_user_input(number_of_days)
     rerender_app()
     
