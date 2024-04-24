@@ -5,7 +5,7 @@ name_of_unit = "hours";
 
 def days_to_unit(d):
     print(f"{d} days are {d*calculate_to_unit} {name_of_unit}")
-    render_again = input("Do you want to continuing calculation? (y/n) :")
+    render_again = input("Do you want to continuing calculation? (y/n) :\n")
     if(render_again == 'y' or render_again == 'Y'):
         get_user_input()
     else:
@@ -19,7 +19,7 @@ def validate_user_input(input):
         get_user_input()
     
 def get_user_input():
-    user_input = input("Enter your Desired Number of Days:")
+    user_input = input("Enter your Desired Number of Days:\n")
     validate_user_input(user_input)
     
 get_user_input()
