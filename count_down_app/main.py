@@ -1,6 +1,6 @@
-# Accept user inputs of goal and deadline
+# Accept user's inputs of goal and deadline
 # {goal:"",deadline:""}
-# an then return the remaing days
+# and then return the remaing days
 import logging
 from datetime import date
 logging.basicConfig(level=logging.INFO)
