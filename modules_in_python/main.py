@@ -1,8 +1,9 @@
 # dictionary reminds me of object in javascript
 # Python relies on indentation (whitespace at the beginning of a line) to define scope in the code.
 # Other programming languages often use curly-brackets for this purpose.
+import logging
 calculate_to_unit = 24;
-
+logger = logging.getLogger("MAIN")
 def days_to_unit(numberOfDays,conversionUnit):
     match conversionUnit :
         case "hours": 
@@ -12,7 +13,8 @@ def days_to_unit(numberOfDays,conversionUnit):
         case "seconds": 
             print(f"✅ {numberOfDays} days are {numberOfDays*calculate_to_unit*60*60} {conversionUnit}")
         case _ :
-            print("❌ Not a vaild conversion unit. ")
+            logger.error("❌ Not a vaild conversion unit.")
+            # print("❌ Not a vaild conversion unit. ")
             
             
 def not_a_valid_data_type(a_valid_type,name,message):

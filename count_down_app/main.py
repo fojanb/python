@@ -2,6 +2,7 @@
 # {goal:"",deadline:""}
 # and then return the remaing days
 import logging
+import django
 from datetime import date
 logging.basicConfig(level=logging.INFO)
 user_inputs = input("Please enter your goal and deadline (e.g. yyyy-mm-dd) separated by colon :\n")
@@ -15,5 +16,4 @@ def numOfDays(date1, date2):
     else:
         return (date1-date2).days
     
-logging.info(f"Remaining days {numOfDays(deadline_date, current_date)}")
-
+logging.info(f"Remaining days for your goal <{user_inputs_dict["goal"]}> is {numOfDays(deadline_date, current_date)}")
