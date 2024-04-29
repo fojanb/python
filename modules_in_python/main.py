@@ -26,18 +26,12 @@ def validate_user_input(input):
         not_a_valid_data_type(input["conversion_unit"].isalpha(),"conversion_unit","alphabet")
         not_a_valid_data_type(input["number_of_days"].isnumeric(),"number_of_days","positive whole number")
         
-def rerender_app():
-    render_again = input("Do you want to continuing calculation? (y/n) :\n")
-    if(render_again == 'y' or render_again == 'Y'):
-        get_user_input()
-    else:
-        print("👋 Thanks for using our application and see you later.")
-    
 def get_user_input():
     user_input = input("Enter your number of days and conversion unit separated with : e.g. 10:hours \n")
     user_dict = {"number_of_days":user_input.split(":")[0],"conversion_unit":user_input.split(":")[1]}
     validate_user_input(user_dict)
-    rerender_app()
+    import helper
+    helper.rerender_app()
     
 get_user_input()
 
