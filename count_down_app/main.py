@@ -2,7 +2,6 @@
 # {goal:"",deadline:""}
 # and then return the remaing days
 import logging
-import django
 from datetime import date
 logging.basicConfig(level=logging.INFO)
 user_inputs = input("Please enter your goal and deadline (e.g. yyyy-mm-dd) separated by colon :\n")
