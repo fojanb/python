@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="get" action="">
+        <label for="username">User Name</label>
+        <input type="text" id="username" value="" placeholder="Enter github username" autocomplete="off" required>
+        <button type="submit">List all the repos</button>
+    </form>
+    <script>
+        document.getElementById("username").addEventListener("change", (e1) => {
+            let username = e1.target.value;
+            document.querySelector("form").addEventListener("submit", (e2) => {
+                document.querySelector("form").action = `/`
+            })
+        })
+    </script>
+</body>
+</html>

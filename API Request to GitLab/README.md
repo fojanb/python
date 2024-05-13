@@ -1,0 +1,1 @@
+We are going to learn how to use Python to talk to external applications. Here in this project we use GitLab as an apllication that out Python application wants to comminucate with. For this purposes we need to use some sort of protocols like HTTP protocols.
